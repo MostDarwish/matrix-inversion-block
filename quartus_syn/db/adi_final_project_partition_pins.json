@@ -1,0 +1,221 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "done",
+					"strict" : false
+				},
+				{
+					"name" : "transpose_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "transpose_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "transpose_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "transpose_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "transpose_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "transpose_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "transpose_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "transpose_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "transpose_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "transpose_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "transpose_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "transpose_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "transpose_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "transpose_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "transpose_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "transpose_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "RST_n",
+					"strict" : false
+				},
+				{
+					"name" : "start_transpose",
+					"strict" : false
+				},
+				{
+					"name" : "valid_transpose",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr2[9]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr2[10]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr2[11]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr2[12]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr2[13]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr2[14]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr2[15]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr1[9]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr1[10]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr1[11]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr1[12]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr1[13]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr1[14]",
+					"strict" : false
+				},
+				{
+					"name" : "rot_out1_opr1[15]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

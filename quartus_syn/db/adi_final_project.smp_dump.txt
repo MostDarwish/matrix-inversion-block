@@ -1,0 +1,16 @@
+
+State Machine - |QTranspose|element
+Name element.calc_element31 element.calc_element32 element.calc_element21 element.calc_element22 element.calc_element13_33 element.000 
+element.000 0 0 0 0 0 0 
+element.calc_element13_33 0 0 0 0 1 1 
+element.calc_element22 0 0 0 1 0 1 
+element.calc_element21 0 0 1 0 0 1 
+element.calc_element32 0 1 0 0 0 1 
+element.calc_element31 1 0 0 0 0 1 
+
+State Machine - |QTranspose|state
+Name state.wait_start state.out_data state.calculation state.00 
+state.00 0 0 0 0 
+state.calculation 0 0 1 1 
+state.out_data 0 1 0 1 
+state.wait_start 1 0 0 1 

@@ -1,0 +1,411 @@
+Analysis & Synthesis report for adi_final_project
+Sun Sep 17 23:50:59 2023
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. State Machine - |QTranspose|element
+ 10. State Machine - |QTranspose|state
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: Top-level Entity: |QTranspose
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun Sep 17 23:50:59 2023       ;
+; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Revision Name                   ; adi_final_project                           ;
+; Top-level Entity Name           ; QTranspose                                  ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 357                                         ;
+; Total pins                      ; 53                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 2                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; QTranspose         ; adi_final_project  ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                               ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------------------+-----------------+------------------------+----------------------------------------------+---------+
+; File Name with User-Entered Path             ; Used in Netlist ; File Type              ; File Name with Absolute Path                 ; Library ;
++----------------------------------------------+-----------------+------------------------+----------------------------------------------+---------+
+; C:/Users/mdshm/OneDrive/Desktop/QTranspose.v ; yes             ; User Verilog HDL File  ; C:/Users/mdshm/OneDrive/Desktop/QTranspose.v ;         ;
++----------------------------------------------+-----------------+------------------------+----------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 228       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 290       ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 44        ;
+;     -- 5 input functions                    ; 95        ;
+;     -- 4 input functions                    ; 78        ;
+;     -- <=3 input functions                  ; 73        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 357       ;
+;                                             ;           ;
+; I/O pins                                    ; 53        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 2         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 357       ;
+; Total fan-out                               ; 2831      ;
+; Average fan-out                             ; 3.75      ;
++---------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |QTranspose                ; 290 (290)           ; 357 (357)                 ; 0                 ; 2          ; 53   ; 0            ; |QTranspose         ; QTranspose  ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary ;
++-------------------------------+--------------+
+; Statistic                     ; Number Used  ;
++-------------------------------+--------------+
+; Two Independent 18x18         ; 2            ;
+; Total number of DSP blocks    ; 2            ;
+;                               ;              ;
+; Fixed Point Signed Multiplier ; 2            ;
++-------------------------------+--------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |QTranspose|element                                                                                                                                     ;
++---------------------------+------------------------+------------------------+------------------------+------------------------+---------------------------+-------------+
+; Name                      ; element.calc_element31 ; element.calc_element32 ; element.calc_element21 ; element.calc_element22 ; element.calc_element13_33 ; element.000 ;
++---------------------------+------------------------+------------------------+------------------------+------------------------+---------------------------+-------------+
+; element.000               ; 0                      ; 0                      ; 0                      ; 0                      ; 0                         ; 0           ;
+; element.calc_element13_33 ; 0                      ; 0                      ; 0                      ; 0                      ; 1                         ; 1           ;
+; element.calc_element22    ; 0                      ; 0                      ; 0                      ; 1                      ; 0                         ; 1           ;
+; element.calc_element21    ; 0                      ; 0                      ; 1                      ; 0                      ; 0                         ; 1           ;
+; element.calc_element32    ; 0                      ; 1                      ; 0                      ; 0                      ; 0                         ; 1           ;
+; element.calc_element31    ; 1                      ; 0                      ; 0                      ; 0                      ; 0                         ; 1           ;
++---------------------------+------------------------+------------------------+------------------------+------------------------+---------------------------+-------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------+
+; State Machine - |QTranspose|state                                                    ;
++-------------------+------------------+----------------+-------------------+----------+
+; Name              ; state.wait_start ; state.out_data ; state.calculation ; state.00 ;
++-------------------+------------------+----------------+-------------------+----------+
+; state.00          ; 0                ; 0              ; 0                 ; 0        ;
+; state.calculation ; 0                ; 0              ; 1                 ; 1        ;
+; state.out_data    ; 0                ; 1              ; 0                 ; 1        ;
+; state.wait_start  ; 1                ; 0              ; 0                 ; 1        ;
++-------------------+------------------+----------------+-------------------+----------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; In_Data_Counter[0]                    ; Stuck at GND due to stuck port data_in ;
+; element~10                            ; Lost fanout                            ;
+; element~11                            ; Lost fanout                            ;
+; element~12                            ; Lost fanout                            ;
+; state~8                               ; Lost fanout                            ;
+; state~9                               ; Lost fanout                            ;
+; Total Number of Removed Registers = 6 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 357   ;
+; Number of registers using Synchronous Clear  ; 16    ;
+; Number of registers using Synchronous Load   ; 48    ;
+; Number of registers using Asynchronous Clear ; 293   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 351   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |QTranspose|temp_reg1[0]           ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |QTranspose|trans_matrix_reg[3][2] ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |QTranspose|Mul2_In2[2]            ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |QTranspose|Mul2_In1[4]            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |QTranspose|mult_delay_count[1]    ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; Yes        ; |QTranspose|Mul1_In1[13]           ;
+; 20:1               ; 16 bits   ; 208 LEs       ; 80 LEs               ; 128 LEs                ; Yes        ; |QTranspose|transpose_out[2]~reg0  ;
+; 10:1               ; 16 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |QTranspose|Mul1_In2[1]            ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |QTranspose|Selector138            ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |QTranspose|element                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |QTranspose ;
++--------------------+-------+-----------------------------------------------+
+; Parameter Name     ; Value ; Type                                          ;
++--------------------+-------+-----------------------------------------------+
+; WORDLEN            ; 16    ; Signed Integer                                ;
+; FRACTION_WIDTH     ; 12    ; Signed Integer                                ;
+; MATRIX_ELEMENT_NUM ; 9     ; Signed Integer                                ;
++--------------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 357                         ;
+;     CLR               ; 6                           ;
+;     ENA               ; 32                          ;
+;     ENA CLR           ; 255                         ;
+;     ENA CLR SCLR      ; 16                          ;
+;     ENA CLR SLD       ; 16                          ;
+;     ENA SLD           ; 32                          ;
+; arriav_lcell_comb     ; 290                         ;
+;     arith             ; 47                          ;
+;         1 data inputs ; 30                          ;
+;         2 data inputs ; 17                          ;
+;     normal            ; 227                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 78                          ;
+;         5 data inputs ; 95                          ;
+;         6 data inputs ; 44                          ;
+;     shared            ; 16                          ;
+;         2 data inputs ; 16                          ;
+; arriav_mac            ; 2                           ;
+; boundary_port         ; 53                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.89                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Sun Sep 17 23:50:46 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off adi_final_project -c adi_final_project
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file c:/users/mdshm/onedrive/desktop/qtranspose.v
+    Info (12023): Found entity 1: QTranspose File: C:/Users/mdshm/OneDrive/Desktop/QTranspose.v Line: 1
+Info (12127): Elaborating entity "QTranspose" for the top level hierarchy
+Warning (10240): Verilog HDL Always Construct warning at QTranspose.v(50): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: C:/Users/mdshm/OneDrive/Desktop/QTranspose.v Line: 50
+Info (10041): Inferred latch for "trans_matrix_reg[4][0]" at QTranspose.v(50) File: C:/Users/mdshm/OneDrive/Desktop/QTranspose.v Line: 50
+Info (10041): Inferred latch for "trans_matrix_reg[4][1]" at QTranspose.v(50) File: C:/Users/mdshm/OneDrive/Desktop/QTranspose.v Line: 50
+Info (10041): Inferred latch for "trans_matrix_reg[4][2]" at QTranspose.v(50) File: C:/Users/mdshm/OneDrive/Desktop/QTranspose.v Line: 50
+Info (10041): Inferred latch for "trans_matrix_reg[4][3]" at QTranspose.v(50) File: C:/Users/mdshm/OneDrive/Desktop/QTranspose.v Line: 50
+Info (10041): Inferred latch for "trans_matrix_reg[4][4]" at QTranspose.v(50) File: C:/Users/mdshm/OneDrive/Desktop/QTranspose.v Line: 50
+Info (10041): Inferred latch for "trans_matrix_reg[4][5]" at QTranspose.v(50) File: C:/Users/mdshm/OneDrive/Desktop/QTranspose.v Line: 50
+Info (10041): Inferred latch for "trans_matrix_reg[4][6]" at QTranspose.v(50) File: C:/Users/mdshm/OneDrive/Desktop/QTranspose.v Line: 50
+Info (10041): Inferred latch for "trans_matrix_reg[4][7]" at QTranspose.v(50) File: C:/Users/mdshm/OneDrive/Desktop/QTranspose.v Line: 50
+Info (10041): Inferred latch for "trans_matrix_reg[4][8]" at QTranspose.v(50) File: C:/Users/mdshm/OneDrive/Desktop/QTranspose.v Line: 50
+Info (10041): Inferred latch for "trans_matrix_reg[4][9]" at QTranspose.v(50) File: C:/Users/mdshm/OneDrive/Desktop/QTranspose.v Line: 50
+Info (10041): Inferred latch for "trans_matrix_reg[4][10]" at QTranspose.v(50) File: C:/Users/mdshm/OneDrive/Desktop/QTranspose.v Line: 50
+Info (10041): Inferred latch for "trans_matrix_reg[4][11]" at QTranspose.v(50) File: C:/Users/mdshm/OneDrive/Desktop/QTranspose.v Line: 50
+Info (10041): Inferred latch for "trans_matrix_reg[4][12]" at QTranspose.v(50) File: C:/Users/mdshm/OneDrive/Desktop/QTranspose.v Line: 50
+Info (10041): Inferred latch for "trans_matrix_reg[4][13]" at QTranspose.v(50) File: C:/Users/mdshm/OneDrive/Desktop/QTranspose.v Line: 50
+Info (10041): Inferred latch for "trans_matrix_reg[4][14]" at QTranspose.v(50) File: C:/Users/mdshm/OneDrive/Desktop/QTranspose.v Line: 50
+Info (10041): Inferred latch for "trans_matrix_reg[4][15]" at QTranspose.v(50) File: C:/Users/mdshm/OneDrive/Desktop/QTranspose.v Line: 50
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 5 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 590 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 36 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 535 logic cells
+    Info (21062): Implemented 2 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4834 megabytes
+    Info: Processing ended: Sun Sep 17 23:50:59 2023
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:32
+
+
